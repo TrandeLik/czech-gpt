@@ -139,7 +139,8 @@ class CzechGPTModel(PreTrainedModel, GenerationMixin):
         ))
         
         self.head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
-        self.embed.wte.weight = self.head.weight # Weight tying
+        if config.tie_word_embeddings:
+            self.embed.wte.weight = self.head.weight
 
         self.apply(self._init_weights)
 

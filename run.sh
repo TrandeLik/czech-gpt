@@ -3,5 +3,7 @@
 # CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed384_muon20k --warmup_steps 600 --max_steps 20000 --n_embd 384
 # CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed384_muon50k --warmup_steps 3000 --max_steps 50000 --n_embd 384
 # CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed384_adamw50k --warmup_steps 3000 --max_steps 50000 --n_embd 384 --no_muon
-CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed64_muon50k --warmup_steps 600 --max_steps 20000 --n_embd 64 --n_head 4
-CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed64_layers4_muon50k --warmup_steps 600 --max_steps 20000 --n_embd 64 --n_head 4 --n_layer 4
+# CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed64_muon20k --warmup_steps 600 --max_steps 20000 --n_embd 64 --n_head 4
+# CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed64_layers4_muon20k --warmup_steps 600 --max_steps 20000 --n_embd 64 --n_head 4 --n_layer 4
+# CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed384_muon105k --warmup_steps 6000 --max_steps 105000 --n_embd 384 --eval_interval 5000
+CUDA_VISIBLE_DEVICE=0 python train.py --experiment_suffix vocab_64_embed384_muon120k --warmup_steps 6000 --max_steps 120000 --n_embd 384 --eval_interval 5000 --no_tying

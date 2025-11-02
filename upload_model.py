@@ -1,6 +1,6 @@
 import os
 from transformers import AutoTokenizer, AutoModel, AutoConfig
-from model import CzechGPTConfig, CzechGPTModel
+from src.model import CzechGPTConfig, CzechGPTModel
 from tokenizers import Tokenizer
 from huggingface_hub import login
 
@@ -10,7 +10,7 @@ AutoModel.register(CzechGPTConfig, CzechGPTModel)
 HF_TOKEN = os.getenv("HF_TOKEN")
 login(token=HF_TOKEN)
 
-MODEL_NAME = 'vocab_64_embed384_adamw50k'
+MODEL_NAME = 'vocab_64_embed384_muon100k'
 LOCAL_MODEL_PATH = f"checkpoint_{MODEL_NAME}"
 
 NEW_REPO_ID = f"TrandeLik/czech_gpt_{MODEL_NAME}"

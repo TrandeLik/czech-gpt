@@ -72,13 +72,14 @@ Comet ML Project Link: https://www.comet.com/trandelik/czech-gpt-pretrain/view/n
 | 64 | 768 | 12 | 12 | Muon | 85,111,296 | 0.05 | 5.449 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed768_muon20k) |
 | 64 | 384 | 12 | 12 | Muon | 21,321,984 | 0.22 | 5.751 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon20k) |
 | 64 | 384 | 12 | 12 | Muon | 21,321,984 | 0.55 | 5.254 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon50k) |
+| 64 | 384 | 12 | 12 | Muon | 21,321,984 | 1.00 | 4.992 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon100k) |
 | 64 | 384 | 12 | 12 | AdamW | 21,321,984 | 0.55 | 5.452 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_adamw50k) |
-| 64 | 64 | 4 | 12 | Muon | 604,800 | 7.8 | TBA | TBA |
-| 64 | 64 | 4 | 4 | Muon | TBA | TBA | TBA | TBA |
+| 64 | 64 | 4 | 12 | Muon | 604,800 | 6.77 | 7.972 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed64_muon20k) |
+| 64 | 64 | 4 | 4 | Muon | 204,416 | 20.03 | 10.28 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed64_layers4_muon50k) |
 
 ## Reproducibility
 
-- Setup Environment: `pip install -r requirements.txt`
+- Setup Environment: create environment from environment.yml (e.g., using `micromamba`)
 - Prepare Data: Run the `data.ipynb notebook` to download and preprocess the Wikipedia corpus.
 - Train Tokenizer: Run the `tokenizers.ipynb` notebook to train your custom tokenizer. Ensure the path in `train.py` points to the correct tokenizer file.
 - Set Up Logging: login into Comet ML

@@ -2,10 +2,6 @@ import os
 import torch
 from torch.utils.data import Dataset
 from tokenizers import Tokenizer
-import logging
-
-
-logging.basicConfig(level=logging.INFO)
 
 
 def create_train_val_split(corpus_path, val_split_ratio=0.01):
@@ -13,10 +9,10 @@ def create_train_val_split(corpus_path, val_split_ratio=0.01):
     val_path = "val.txt"
 
     if os.path.exists(train_path) and os.path.exists(val_path):
-        logging.info("Train/validation splits already exist. Skipping creation.")
+        print("Train/validation splits already exist. Skipping creation.")
         return train_path, val_path
 
-    logging.info(f"Creating train/val split from {corpus_path}...")
+    print.info(f"Creating train/val split from {corpus_path}...")
     with open(corpus_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
     
@@ -30,7 +26,7 @@ def create_train_val_split(corpus_path, val_split_ratio=0.01):
     with open(val_path, 'w', encoding='utf-8') as f:
         f.writelines(val_lines)
     
-    logging.info(f"Created {train_path} ({len(train_lines)} lines) and {val_path} ({len(val_lines)} lines).")
+    print(f"Created {train_path} ({len(train_lines)} lines) and {val_path} ({len(val_lines)} lines).")
     return train_path, val_path
 
 
@@ -39,13 +35,13 @@ class CzechCorpusDataset(Dataset):
         self.context_length = context_length
         tokenizer = Tokenizer.from_file(tokenizer_path)
 
-        logging.info(f"Tokenizing data from {file_path}. This may take a while...")
+        print(f"Tokenizing data from {file_path}. This may take a while...")
         with open(file_path, 'r', encoding='utf-8') as f:
             text = f.read()
         
         tokenized_output = tokenizer.encode(text)
         self.data = torch.tensor(tokenized_output.ids, dtype=torch.long)
-        logging.info(f"Tokenization complete. Corpus has {len(self.data):,} tokens.")
+        print(f"Tokenization complete. Corpus has {len(self.data):,} tokens.")
 
     def __len__(self):
         return len(self.data) - self.context_length
