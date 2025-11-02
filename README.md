@@ -66,16 +66,17 @@ Comet ML Project Link: https://www.comet.com/trandelik/czech-gpt-pretrain/view/n
 
 ### Model Summary
 
-| Vocab Size |	Embedding Dim |	Heads 	|	Layers | Optimizer	 | Parameters count | Number of Chinchillas | Validation Perplexity |	Checkpoint Link |
-| ---------- | ------------- | ---------- | ------- | ------------ | ---------------- | --------------------- | ------ | ----- |
-| 64 | 768 | 12 | 12 | Muon | 85,111,296 | 0.025 | 5.918 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed768_muon10k) |
-| 64 | 768 | 12 | 12 | Muon | 85,111,296 | 0.05 | 5.449 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed768_muon20k) |
-| 64 | 384 | 12 | 12 | Muon | 21,321,984 | 0.22 | 5.751 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon20k) |
-| 64 | 384 | 12 | 12 | Muon | 21,321,984 | 0.55 | 5.254 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon50k) |
-| 64 | 384 | 12 | 12 | Muon | 21,321,984 | 1.00 | 4.992 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon100k) |
-| 64 | 384 | 12 | 12 | AdamW | 21,321,984 | 0.55 | 5.452 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_adamw50k) |
-| 64 | 64 | 4 | 12 | Muon | 604,800 | 6.77 | 7.972 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed64_muon20k) |
-| 64 | 64 | 4 | 4 | Muon | 204,416 | 20.03 | 10.28 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed64_layers4_muon50k) |
+| Tying | Vocab Size |	Embedding Dim |	Heads 	|	Layers | Optimizer	 | Parameters count | Number of Chinchillas | Validation Perplexity |	Checkpoint Link |
+| ----- | ---------- | ------------- | ---------- | ------- | ------------ | ---------------- | --------------------- | ------ | ----- |
+| Yes | 64 | 768 | 12 | 12 | Muon | 85,111,296 | 0.025 | 5.918 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed768_muon10k) |
+| Yes | 64 | 768 | 12 | 12 | Muon | 85,111,296 | 0.05 | 5.449 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed768_muon20k) |
+| Yes | 64 | 384 | 12 | 12 | Muon | 21,321,984 | 0.22 | 5.751 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon20k) |
+| Yes | 64 | 384 | 12 | 12 | Muon | 21,321,984 | 0.55 | 5.254 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon50k) |
+| Yes | 64 | 384 | 12 | 12 | Muon | 21,321,984 | 1.00 | 4.992 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon100k) |
+| No | 64 | 384 | 12 | 12 | Muon | 21,321,984 | 1.14 | **4.944** | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_muon100k) |
+| Yes | 64 | 384 | 12 | 12 | AdamW | 21,321,984 | 0.55 | 5.452 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed384_adamw50k) |
+| Yes | 64 | 64 | 4 | 12 | Muon | 604,800 | 6.77 | 7.972 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed64_muon20k) |
+| Yes | 64 | 64 | 4 | 4 | Muon | 204,416 | 20.03 | 10.28 | [HF](https://huggingface.co/TrandeLik/czech_gpt_vocab_64_embed64_layers4_muon50k) |
 
 ## Reproducibility
 

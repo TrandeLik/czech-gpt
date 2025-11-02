@@ -45,7 +45,7 @@ def create_model(args, tokenizer, device):
         n_layer=args.n_layer,
         n_head=args.n_head,
         dropout=args.dropout,
-        tie_word_embeddings= not args.no_tying,
+        tie_word_embeddings=not args.no_tying,
     )
     model = CzechGPTModel(model_config)
     model.to(device)
